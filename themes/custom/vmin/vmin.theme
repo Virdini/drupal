@@ -1,0 +1,89 @@
+<?php
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_preprocess_HOOK() for breadcrumb templates.
+ */
+function vmin_preprocess_breadcrumb(&$variables) {
+  $title = strip_tags(_vbase_get_title());
+  $variables['breadcrumb'][] = ['text' => $title];
+  $variables['breadcrumb_meta'][] = [
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => [
+      'itemprop' => 'name',
+      'content' => $title,
+    ],
+  ];
+  if (!isset($variables['#cache']['contexts']) || !in_array('route', $variables['#cache']['contexts'])) {
+    $variables['#cache']['contexts'][] = 'route';
+  }
+}
+
+/**
+ * Implements hook_preprocess_pager().
+ */
+function vmin_preprocess_pager(&$variables) {
+  $route_name = $variables['pager']['#route_name'];
+  $route_parameters = isset($variables['pager']['#route_parameters']) ? $variables['pager']['#route_parameters'] : [];
+  $options = [
+    'query' => \Drupal::service('pager.parameters')->getQueryParameters(),
+  ];
+  if (empty($options['query'])) {
+    $route_name = '<current>';
+  }
+  if (isset($variables['items']['first']['href'])) {
+    $variables['items']['first']['href'] = Url::fromRoute($route_name, $route_parameters, $options)->toString();
+  }
+  if (isset($variables['items']['pages'][1]['href'])) {
+    $variables['items']['pages'][1]['href'] = Url::fromRoute($route_name, $route_parameters, $options)->toString();
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for field templates.
+ */
+function vmin_preprocess_field(&$variables) {
+  $field = $variables['element']['#items'];
+  $entity = $variables['element']['#object'];
+  switch ($variables['field_name']) {
+    // Paragraph image
+    case 'field_p_img':
+      $layout = NULL;
+      $layouts = [];
+
+      // Based on image layout
+      if ($entity->hasField('field_p_img_layout')) {
+        $layout = $entity->get('field_p_img_layout')->getString();
+        $layouts = [
+          'fullwidth' => 'fullwidth_screen',
+          'c620' => '620_workzone',
+          'c940' => '940_workzone',
+          'c1260' => '1260_workzone',
+          'c1580' => '1580_workzone',
+        ];
+        if ($layout != 'fullwidth') {
+          $variables['attributes']['class'][] = 'wr';
+        }
+      }
+      // Based on image-text layout
+      elseif ($entity->hasField('field_p_img_text_layout')) {
+        $layout = $entity->get('field_p_img_text_layout')->getString();
+        $layouts = [
+          'left' => 'with_text_workzone',
+          'right' => 'with_text_workzone',
+          'left_1' => 'with_text_workzone',
+          'right_1' => 'with_text_workzone',
+        ];
+      }
+
+      // Change image responsive style
+      if (isset($variables['items'][0]['content']['#responsive_image_style_id'])) {
+        if ($layout && isset($layouts[$layout])) {
+          $variables['items'][0]['content']['#responsive_image_style_id'] = $layouts[$layout];
+        }
+      }
+      break;
+  }
+}

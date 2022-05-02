@@ -1,0 +1,26 @@
+.wr {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.wr .wr {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+@media screen and (min-width: 1000px) {
+  .wr {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1320px) {
+  .wr {
+    width: 1260px;
+  }
+}
+@media screen and (min-width: 1640px) {
+  .wr {
+    width: 1580px;
+  }
+}

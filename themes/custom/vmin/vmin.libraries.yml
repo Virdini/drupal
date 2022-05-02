@@ -1,0 +1,31 @@
+global-styling:
+  css:
+    layout:
+      css/layout/default.css: {}
+    theme:
+      css/style.css: {}
+
+paragraph.text:
+  css:
+    theme:
+      css/paragraph/text.css: {}
+
+paragraph.image:
+  css:
+    theme:
+      css/paragraph/image.css: {}
+
+paragraph.images:
+  css:
+    theme:
+      css/paragraph/images.css: {}
+
+paragraph.image_text:
+  css:
+    theme:
+      css/paragraph/image_text.css: {}
+
+paragraph.video:
+  css:
+    theme:
+      css/paragraph/video.css: {}

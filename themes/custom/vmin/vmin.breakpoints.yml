@@ -1,0 +1,152 @@
+vmin.default:
+  label: Default
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.mobile:
+  label: min320
+  mediaQuery: 'all and (min-width: 320px)'
+  weight: 10
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.mobile_up:
+  label: min321
+  mediaQuery: 'all and (min-width: 321px)'
+  weight: 11
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.mobile1:
+  label: min360
+  mediaQuery: 'all and (min-width: 360px)'
+  weight: 20
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.mobile1_up:
+  label: min361
+  mediaQuery: 'all and (min-width: 361px)'
+  weight: 21
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.mobile2:
+  label: min480
+  mediaQuery: 'all and (min-width: 480px)'
+  weight: 30
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.mobile2_up:
+  label: min481
+  mediaQuery: 'all and (min-width: 481px)'
+  weight: 31
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.mobile3:
+  label: min641
+  mediaQuery: 'all and (min-width: 640px)'
+  weight: 40
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.mobile3_up:
+  label: min641
+  mediaQuery: 'all and (min-width: 641px)'
+  weight: 41
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.tablet:
+  label: min760
+  mediaQuery: 'all and (min-width: 760px)'
+  weight: 50
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.tablet_up:
+  label: min761
+  mediaQuery: 'all and (min-width: 761px)'
+  weight: 51
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.tablet1:
+  label: min1000
+  mediaQuery: 'all and (min-width: 1000px)'
+  weight: 60
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.tablet1_up:
+  label: min1001
+  mediaQuery: 'all and (min-width: 1001px)'
+  weight: 61
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.desktop:
+  label: min1320
+  mediaQuery: 'all and (min-width: 1320px)'
+  weight: 70
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.desktop_up:
+  label: min1321
+  mediaQuery: 'all and (min-width: 1321px)'
+  weight: 71
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.desktop1:
+  label: min1640
+  mediaQuery: 'all and (min-width: 1640px)'
+  weight: 80
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.desktop1_up:
+  label: min1641
+  mediaQuery: 'all and (min-width: 1641px)'
+  weight: 81
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.desktop2:
+  label: min1920
+  mediaQuery: 'all and (min-width: 1920px)'
+  weight: 82
+  multipliers:
+    - 1x
+    - 2x
+    - 3x
+vmin.desktop2_up:
+  label: min1921
+  mediaQuery: 'all and (min-width: 1921px)'
+  weight: 83
+  multipliers:
+    - 1x
+    - 2x
+    - 3x

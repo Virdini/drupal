@@ -1,0 +1,38 @@
+name: Virdini Minimal
+type: theme
+base theme: vtcore
+description: 'Blank minimal theme for the current project based on Virdini Minimalist Core'
+package: Virdini
+core_version_requirement: ^9
+version: '9.0.0'
+
+libraries:
+  - core/normalize
+  - vmin/global-styling
+
+#libraries-override:
+#  vmcore/global-styling:
+#    css:
+#      base:
+#        css/base/elements.css: css/base/elements.css
+#        css/base/table.css: css/base/table.css
+#        css/base/blockquote.css: css/base/blockquote.css
+#        css/base/details.css: css/base/details.css
+#        css/base/fieldset.css: css/base/fieldset.css
+
+#ckeditor_stylesheets:
+#  - css/base/elements.css
+#  - css/base/table.css
+#  - css/base/blockquote.css
+#  - css/base/details.css
+#  - css/base/fieldset.css
+#  - css/base/editor-classes.css
+#  - css/base/editor.css
+  
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted'
+  content: 'Content'
+  footer: 'Footer'

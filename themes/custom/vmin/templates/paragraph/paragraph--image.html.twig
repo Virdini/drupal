@@ -1,0 +1,9 @@
+{%
+  set classes = [
+    'para-t-' ~ paragraph.bundle|clean_class,
+    view_mode ? 'para-v-' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'para-unpub'
+  ]
+%}
+{{ attach_library('vmin/paragraph.image') }}
+<div{{ attributes.addClass(classes).setAttribute('data-l', paragraph.field_p_img_layout.value) }}>{{ content }}</div>

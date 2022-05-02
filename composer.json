@@ -1,0 +1,77 @@
+{
+  "name": "virdini/drupal",
+  "description": "Project template for Drupal",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://virdini.com",
+  "support": {
+    "email": "tech@virdini.com",
+    "source": "https://github.com/Virdini/drupal"
+  },
+  "repositories": [
+    { "url": "https://packages.virdini.com", "type": "composer" },
+    { "url": "https://packages.drupal.org/8", "type": "composer" }
+  ],
+  "require": {
+    "composer/installers": "^1.9",
+    "drupal/core-composer-scaffold": "^9",
+    "drupal/core-project-message": "^9",
+    "drupal/core-vendor-hardening": "^9",
+    "virdini/vbase": "^9"
+  },
+  "require-dev": {
+    "kint-php/kint": "^4.1"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/installers": true,
+      "drupal/console-extend-plugin": true,
+      "drupal/core-composer-scaffold": true,
+      "drupal/core-project-message": true,
+      "drupal/core-vendor-hardening": true
+    }
+  },
+  "extra": {
+    "drupal-scaffold": {
+      "allowed-packages": ["virdini/vbase"],
+      "locations": {
+        "web-root": "./"
+      },
+      "file-mapping": {
+        "[web-root]/.ht.router.php": false,
+        "[web-root]/example.gitignore": false,
+        "[web-root]/INSTALL.txt": false,
+        "[web-root]/README.md": false,
+        "[web-root]/web.config": false,
+        "[web-root]/sites/README.txt": false,
+        "[web-root]/sites/example.settings.local.php": false,
+        "[web-root]/sites/example.sites.php": false,
+        "[web-root]/modules/README.txt": false,
+        "[web-root]/profiles/README.txt": false,
+        "[web-root]/themes/README.txt": false
+      }
+    },
+    "installer-paths": {
+      "profiles/{$vendor}/{$name}": ["virdini/vbase"],
+      "themes/{$vendor}/{$name}": ["virdini/vadmin", "virdini/vtcore"],
+      "modules/{$vendor}/{$name}": ["vendor:virdini"],
+      "core": ["type:drupal-core"],
+      "libraries/{$name}": ["type:drupal-library"],
+      "modules/contrib/{$name}": ["type:drupal-module"],
+      "profiles/contrib/{$name}": ["type:drupal-profile"],
+      "themes/contrib/{$name}": ["type:drupal-theme"],
+      "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+      "modules/custom/{$name}": ["type:drupal-custom-module"],
+      "profiles/custom/{$name}": ["type:drupal-custom-profile"],
+      "themes/custom/{$name}": ["type:drupal-custom-theme"]
+    }
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "ln -s themes/custom/vmin/favicon.ico &>/dev/null"
+    ]
+  }
+}

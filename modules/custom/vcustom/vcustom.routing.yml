@@ -1,0 +1,7 @@
+vcustom.settings.contact:
+  path: '/admin/config/system/site-settings/custom-contact'
+  defaults:
+    _form: '\Drupal\vcustom\Form\SettingsContact'
+    _title: 'Contact information'
+  requirements:
+    _permission: 'vcustom settings'

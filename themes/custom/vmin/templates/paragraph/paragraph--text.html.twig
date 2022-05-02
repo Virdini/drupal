@@ -1,0 +1,11 @@
+{%
+  set classes = [
+    'para-t-' ~ paragraph.bundle|clean_class,
+    view_mode ? 'para-v-' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'para-unpub'
+  ]
+%}
+{{ attach_library('vmin/paragraph.text') }}
+<div{{ attributes.addClass(classes).setAttribute('data-l', paragraph.field_p_text_layout.value) }}>
+  <div class="para-content wr">{{ content }}</div>
+</div>

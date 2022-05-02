@@ -1,0 +1,5 @@
+vcustom.settings.contact:
+  title: 'Contact information'
+  parent: vbase.settings.index
+  description: 'Configure contact information for this site.'
+  route_name: vcustom.settings.contact

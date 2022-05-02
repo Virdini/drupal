@@ -1,0 +1,20 @@
+.para-t-video .field[data-fn="p_title"] {
+  text-align: center;
+}
+@media screen and (min-width: 640px) {
+  .para-t-video .field[data-fn="p_youtube"] {
+    margin: 0 auto;
+  }
+  .para-t-video[data-l="c620"] .field[data-fn="p_youtube"] {
+    max-width: 620px;
+  }
+  .para-t-video[data-l="c940"] .field[data-fn="p_youtube"] {
+    max-width: 940px;
+  }
+  .para-t-video[data-l="c1260"] .field[data-fn="p_youtube"] {
+    max-width: 1260px;
+  }
+  .para-t-video[data-l="c1580"] .field[data-fn="p_youtube"] {
+    max-width: 1580px;
+  }
+}

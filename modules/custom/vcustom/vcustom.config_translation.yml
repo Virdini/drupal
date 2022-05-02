@@ -1,0 +1,5 @@
+vcustom.settings.contact:
+  title: 'Contact information'
+  base_route_name: vcustom.settings.contact
+  names:
+    - vcustom.settings.contact

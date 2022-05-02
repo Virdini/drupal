@@ -1,0 +1,17 @@
+vcustom.settings.contact:
+  type: config_object
+  label: 'Contact information'
+  mapping:
+    email:
+      type: email
+      label: 'Email address'
+    telephones:
+      type: sequence
+      label: 'Telephones'
+      sequence:
+        type: string
+        label: 'Telephone'
+    copyright:
+      type: label
+      label: 'Copyright'
+      translatable: true
