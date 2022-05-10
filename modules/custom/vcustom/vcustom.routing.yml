@@ -5,3 +5,10 @@ vcustom.settings.contact:
     _title: 'Contact information'
   requirements:
     _permission: 'vcustom settings'
+
+vcustom.front:
+  path: '/node'
+  defaults:
+    _controller: '\Drupal\vbase\Controller\EmptyPage::build'
+  requirements:
+    _access: 'TRUE'
