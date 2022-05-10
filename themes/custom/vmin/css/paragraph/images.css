@@ -1,6 +1,12 @@
 .para-t-images .field[data-fn="p_title"] {
   text-align: center;
 }
+.para-t-images .field[data-fn="p_imgs"] {
+  line-height: 0;
+}
+.para-t-images .field[data-fn="p_imgs"] a {
+  outline: none;
+}
 .para-t-images .field[data-fn="p_imgs"] img {
   width: 100%;
   height: auto;
