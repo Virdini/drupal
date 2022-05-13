@@ -7,7 +7,7 @@ use Drupal\Core\Url;
  */
 function vmin_preprocess_breadcrumb(&$variables) {
   $title = strip_tags(_vbase_get_title());
-  $variables['breadcrumb'][] = ['text' => $title];
+  $variables['breadcrumb'][] = ['text' => ['#markup' => $title]];
   $variables['breadcrumb_meta'][] = [
     '#type' => 'html_tag',
     '#tag' => 'meta',
@@ -16,6 +16,8 @@ function vmin_preprocess_breadcrumb(&$variables) {
       'content' => $title,
     ],
   ];
+
+  // Add route context
   if (!isset($variables['#cache']['contexts']) || !in_array('route', $variables['#cache']['contexts'])) {
     $variables['#cache']['contexts'][] = 'route';
   }
@@ -25,17 +27,18 @@ function vmin_preprocess_breadcrumb(&$variables) {
  * Implements hook_preprocess_pager().
  */
 function vmin_preprocess_pager(&$variables) {
-  $route_name = $variables['pager']['#route_name'];
-  $route_parameters = isset($variables['pager']['#route_parameters']) ? $variables['pager']['#route_parameters'] : [];
   $options = [
     'query' => \Drupal::service('pager.parameters')->getQueryParameters(),
   ];
-  if (empty($options['query'])) {
-    $route_name = '<current>';
-  }
+  $route_name = empty($options['query']) ? '<current>' : $variables['pager']['#route_name'];
+  $route_parameters = isset($variables['pager']['#route_parameters']) ? $variables['pager']['#route_parameters'] : [];
+
+  // Modify first page item
   if (isset($variables['items']['first']['href'])) {
     $variables['items']['first']['href'] = Url::fromRoute($route_name, $route_parameters, $options)->toString();
   }
+
+  // Modify last page item
   if (isset($variables['items']['pages'][1]['href'])) {
     $variables['items']['pages'][1]['href'] = Url::fromRoute($route_name, $route_parameters, $options)->toString();
   }
@@ -47,7 +50,8 @@ function vmin_preprocess_pager(&$variables) {
 function vmin_preprocess_field(&$variables) {
   $field = $variables['element']['#items'];
   $entity = $variables['element']['#object'];
-  switch ($variables['field_name']) {
+
+  switch ($field->getName()) {
     // Paragraph image
     case 'field_p_img':
       $layout = NULL;
@@ -63,6 +67,7 @@ function vmin_preprocess_field(&$variables) {
           'c1260' => '1260_workzone',
           'c1580' => '1580_workzone',
         ];
+
         if ($layout != 'fullwidth') {
           $variables['attributes']['class'][] = 'wr';
         }
@@ -79,10 +84,8 @@ function vmin_preprocess_field(&$variables) {
       }
 
       // Change image responsive style
-      if (isset($variables['items'][0]['content']['#responsive_image_style_id'])) {
-        if ($layout && isset($layouts[$layout])) {
+      if (isset($variables['items'][0]['content']['#responsive_image_style_id']) && $layout && isset($layouts[$layout])) {
           $variables['items'][0]['content']['#responsive_image_style_id'] = $layouts[$layout];
-        }
       }
       break;
   }

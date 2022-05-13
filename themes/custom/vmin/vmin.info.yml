@@ -1,7 +1,7 @@
 name: Virdini Minimal
 type: theme
 base theme: vtcore
-description: 'Blank minimal theme for the current project based on Virdini Minimalist Core'
+description: Blank minimal theme for the current project based on Virdini Minimalist Core.
 package: Virdini
 core_version_requirement: ^9
 version: '9.0.0'
@@ -11,7 +11,7 @@ libraries:
   - vmin/global-styling
 
 #libraries-override:
-#  vmcore/global-styling:
+#  vtcore/global-styling:
 #    css:
 #      base:
 #        css/base/elements.css: css/base/elements.css

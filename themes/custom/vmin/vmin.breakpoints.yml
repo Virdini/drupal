@@ -55,7 +55,7 @@ vmin.mobile2_up:
     - 2x
     - 3x
 vmin.mobile3:
-  label: min641
+  label: min640
   mediaQuery: 'all and (min-width: 640px)'
   weight: 40
   multipliers:
