@@ -51,7 +51,17 @@
         "[web-root]/sites/example.sites.php": false,
         "[web-root]/modules/README.txt": false,
         "[web-root]/profiles/README.txt": false,
-        "[web-root]/themes/README.txt": false
+        "[web-root]/themes/README.txt": false,
+        "[web-root]/.htaccess": {
+          "mode": "replace",
+          "path": "core/assets/scaffold/files/htaccess",
+          "overwrite": false
+        },
+        "[web-root]/robots.txt": {
+          "mode": "replace",
+          "path": "core/assets/scaffold/files/robots.txt",
+          "overwrite": false
+        }
       }
     },
     "installer-paths": {
