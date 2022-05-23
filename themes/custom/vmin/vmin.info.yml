@@ -19,6 +19,38 @@ libraries:
 #        css/base/blockquote.css: css/base/blockquote.css
 #        css/base/details.css: css/base/details.css
 #        css/base/fieldset.css: css/base/fieldset.css
+#  vtcore/pager:
+#    css:
+#      component:
+#        css/components/pager.css: css/components/pager.css
+#  vtcore/breadcrumb:
+#    css:
+#      component:
+#        css/components/breadcrumb.css: css/components/breadcrumb.css
+#  vtcore/tabs:
+#    css:
+#      component:
+#        css/components/tabs.css: css/components/tabs.css
+#  vtcore/form:
+#    css:
+#      component:
+#        css/components/form.css: css/components/form.css
+#  vtcore/button:
+#    css:
+#      component:
+#        css/components/button.css: css/components/button.css
+#  vtcore/button:
+#    css:
+#      component:
+#        css/components/button.css: css/components/button.css
+#  core/drupal.dropbutton:
+#    css:
+#      component:
+#        misc/dropbutton/dropbutton.css: css/components/dropbutton.css
+#  core/drupal.vertical-tabs:
+#    css:
+#      component:
+#        misc/vertical-tabs.css: css/components/vertical-tabs.css
 
 #ckeditor_stylesheets:
 #  - css/base/elements.css
