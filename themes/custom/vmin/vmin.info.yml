@@ -42,11 +42,11 @@ libraries:
 #  core/drupal.dropbutton:
 #    css:
 #      component:
-#        misc/dropbutton/dropbutton.css: css/components/dropbutton.css
+#        /themes/virdini/vtcore/css/components/dropbutton.css: css/components/dropbutton.css
 #  core/drupal.vertical-tabs:
 #    css:
 #      component:
-#        misc/vertical-tabs.css: css/components/vertical-tabs.css
+#        /themes/virdini/vtcore/css/components/vertical-tabs.css: css/components/vertical-tabs.css
 
 #ckeditor_stylesheets:
 #  - css/base/elements.css
