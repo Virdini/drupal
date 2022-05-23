@@ -39,10 +39,6 @@ libraries:
 #    css:
 #      component:
 #        css/components/button.css: css/components/button.css
-#  vtcore/button:
-#    css:
-#      component:
-#        css/components/button.css: css/components/button.css
 #  core/drupal.dropbutton:
 #    css:
 #      component:
