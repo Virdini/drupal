@@ -1,9 +1,7 @@
 .para-t-image-text .field[data-fn="p_title"] {
   text-align: center;
 }
-.para-t-image-text .field[data-fn="p_img"] picture,
 .para-t-image-text .field[data-fn="p_img"] img {
-  display: block;
   width: 100%;
   height: auto;
 }
@@ -14,6 +12,7 @@
 }
 .para-t-image-text .field[data-fn="p_img"] {
   grid-area: img;
+  line-height: 0;
 }
 .para-t-image-text .field[data-fn="p_text"] {
   grid-area: text;
