@@ -11,12 +11,16 @@
 @media screen and (min-width: 1000px) {
   .para-t-text[data-l="single_l"] .field[data-fn="p_text"],
   .para-t-text[data-l="single_l"] .field[data-fn="p_title"],
+  .para-t-text[data-l="single_l_0"] .field[data-fn="p_text"],
+  .para-t-text[data-l="single_l_0"] .field[data-fn="p_title"],
   .para-t-text[data-l="single_l_1"] .field[data-fn="p_text"],
   .para-t-text[data-l="single_l_1"] .field[data-fn="p_title"] {
     margin: 0;
   }
   .para-t-text[data-l="single_r"] .field[data-fn="p_text"],
   .para-t-text[data-l="single_r"] .field[data-fn="p_title"],
+  .para-t-text[data-l="single_r_0"] .field[data-fn="p_text"],
+  .para-t-text[data-l="single_r_0"] .field[data-fn="p_title"],
   .para-t-text[data-l="single_r_1"] .field[data-fn="p_text"],
   .para-t-text[data-l="single_r_1"] .field[data-fn="p_title"] {
     margin-left: 320px;
@@ -41,8 +45,16 @@
   .para-t-text[data-l="double"] .para-content {
     max-width: 1260px;
   }
+  .para-t-text[data-l="single_l"] .field[data-fn="p_text"],
+  .para-t-text[data-l="single_l"] .field[data-fn="p_title"] {
+    margin-left: 160px;
+  }
   .para-t-text[data-l="single_r"] .field[data-fn="p_text"],
-  .para-t-text[data-l="single_r"] .field[data-fn="p_title"],
+  .para-t-text[data-l="single_r"] .field[data-fn="p_title"] {
+    margin-left: 480px;
+  }
+  .para-t-text[data-l="single_r_0"] .field[data-fn="p_text"],
+  .para-t-text[data-l="single_r_0"] .field[data-fn="p_title"],
   .para-t-text[data-l="single_r_1"] .field[data-fn="p_text"],
   .para-t-text[data-l="single_r_1"] .field[data-fn="p_title"] {
     margin-left: 640px;
@@ -51,10 +63,18 @@
 @media screen and (min-width: 1640px) {
   .para-t-text[data-l="single_l"] .field[data-fn="p_text"],
   .para-t-text[data-l="single_l"] .field[data-fn="p_title"] {
+    margin-left: 320px;
+  }
+  .para-t-text[data-l="single_l_0"] .field[data-fn="p_text"],
+  .para-t-text[data-l="single_l_0"] .field[data-fn="p_title"] {
     margin-left: 160px;
   }
   .para-t-text[data-l="single_r"] .field[data-fn="p_text"],
   .para-t-text[data-l="single_r"] .field[data-fn="p_title"] {
+    margin-left: 640px;
+  }
+  .para-t-text[data-l="single_r_0"] .field[data-fn="p_text"],
+  .para-t-text[data-l="single_r_0"] .field[data-fn="p_title"] {
     margin-left: 800px;
   }
   .para-t-text[data-l="single_r_1"] .field[data-fn="p_text"],
