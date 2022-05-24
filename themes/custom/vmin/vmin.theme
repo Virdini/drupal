@@ -80,6 +80,8 @@ function vmin_preprocess_field(&$variables) {
           'right' => 'with_text_workzone',
           'left_1' => 'with_text_workzone',
           'right_1' => 'with_text_workzone',
+          'left_o' => 'with_text_screen',
+          'right_o' => 'with_text_screen',
         ];
       }
 
