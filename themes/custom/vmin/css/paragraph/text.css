@@ -1,6 +1,11 @@
 .para-t-text .field[data-fn="p_title"] {
   text-align: center;
 }
+.para-t-text[data-l="title_l"] .field[data-fn="p_title"],
+.para-t-text[data-l="title_r"] .field[data-fn="p_title"] {
+  color: rgba(13, 82, 242, 1);
+  font-weight: bold;
+}
 @media screen and (min-width: 640px) {
   .para-t-text .field[data-fn="p_text"],
   .para-t-text .field[data-fn="p_title"] {
@@ -39,6 +44,37 @@
   .para-t-text[data-l="double"] .field[data-fn="p_text"] ul,
   .para-t-text[data-l="double"] .field[data-fn="p_text"] ol {
     padding-top: 0;
+  }
+  .para-t-text[data-l="title_l"] .para-content,
+  .para-t-text[data-l="title_r"] .para-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px 20px;
+    align-items: center;
+  }
+  .para-t-text[data-l="title_l"] .para-content {
+    grid-template-areas: "title text";
+  }
+  .para-t-text[data-l="title_r"] .para-content {
+    grid-template-areas: "text title";
+  }
+  .para-t-text[data-l="title_l"] .field[data-fn="p_text"],
+  .para-t-text[data-l="title_r"] .field[data-fn="p_text"] {
+    grid-area: text;
+    width: auto;
+  }
+  .para-t-text[data-l="title_l"] .field[data-fn="p_title"],
+  .para-t-text[data-l="title_r"] .field[data-fn="p_title"] {
+    width: auto;
+    grid-area: title;
+  }
+  .para-t-text[data-l="title_l"] .field[data-fn="p_title"] {
+    text-align: right;
+    margin-right: 20px;
+  }
+  .para-t-text[data-l="title_r"] .field[data-fn="p_title"] {
+    text-align: left;
+    margin-left: 20px;
   }
 }
 @media screen and (min-width: 1320px) {
@@ -80,5 +116,21 @@
   .para-t-text[data-l="single_r_1"] .field[data-fn="p_text"],
   .para-t-text[data-l="single_r_1"] .field[data-fn="p_title"] {
     margin-left: 960px;
+  }
+  .para-t-text[data-l="title_l"] .para-content {
+    grid-template-columns: 1fr 620px;
+  }
+  .para-t-text[data-l="title_r"] .para-content {
+    grid-template-columns: 620px 1fr;
+  }
+  .para-t-text[data-l="title_l"] .field[data-fn="p_title"],
+  .para-t-text[data-l="title_r"] .field[data-fn="p_title"] {
+    font-size: 3.22em;
+  }
+  .para-t-text[data-l="title_l"] .field[data-fn="p_title"] {
+    margin-right: 150px;
+  }
+  .para-t-text[data-l="title_r"] .field[data-fn="p_title"] {
+    margin-left: 150px;
   }
 }
