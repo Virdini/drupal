@@ -9,11 +9,11 @@ function vmin_preprocess_breadcrumb(&$variables) {
   $title = strip_tags(_vbase_get_title());
   $variables['breadcrumb'][] = ['text' => ['#markup' => $title]];
   $variables['breadcrumb_meta'][] = [
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
+    '#type' => 'container',
+    '#markup' => $title,
     '#attributes' => [
       'itemprop' => 'name',
-      'content' => $title,
+      'class' => ['visually-hidden'],
     ],
   ];
 
